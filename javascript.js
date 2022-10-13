@@ -39,7 +39,11 @@ const buttons = document.querySelectorAll("button");
 
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
-    container.innerHTML = "";
-    makeGrid();
+    if (button.id === "changeGrid") {
+      container.innerHTML = "";
+      makeGrid();
+    } else if (button.id === "reset") {
+      gridSquare.style.border = "none";
+    }
   });
 });
