@@ -1,0 +1,23 @@
+* {
+  font-family: "Roboto", arial;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: auto;
+  background-color: #85dcb8;
+}
+
+.flexContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  margin: 30px;
+  color: #41b3a3;
+  font-weight: bold;
+  text-transform: uppercase;
+}
