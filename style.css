@@ -16,8 +16,29 @@ body {
 }
 
 h1 {
-  margin: 30px;
+  margin: 20px;
   color: #41b3a3;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+button#reset {
+  background-color: white;
+  border: none;
+  box-shadow: 0px 5px 10px rgb(107, 147, 160);
+  padding: 10px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  border-bottom: 3px solid grey;
+}
+
+button#reset:hover {
+  box-shadow: 0px 15px 25px -5px rgb(107, 147, 160);
+  transform: scale(1.03);
+}
+
+button#reset:active {
+  box-shadow: 0px 4px 8px rgb(141, 184, 199);
+  transform: scale(0.98);
 }
