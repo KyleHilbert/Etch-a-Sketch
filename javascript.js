@@ -14,7 +14,7 @@ function makeGrid() {
   do {
     count = prompt("Enter grid size");
     count = parseInt(count);
-  } while (isNaN(count) || count > 100);
+  } while (isNaN(count) || count > 100 || count === 0);
 
   count = Math.floor(Math.abs(count));
 
