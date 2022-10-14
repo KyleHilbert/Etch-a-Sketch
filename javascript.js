@@ -21,11 +21,12 @@ function makeGrid() {
 
   for (let i = 0; i < count * count; i++) {
     const gridSquare = document.createElement("div");
-    container.appendChild(gridSquare);
     gridSquare.style.textAlign = "center";
     gridSquare.style.height = "((1/count)*100)%";
     gridSquare.style.width = "((1/count)*100)%";
     gridSquare.style.border = "1px solid #E27D60";
+    gridSquare.classList.add("square");
+    container.appendChild(gridSquare);
 
     gridSquare.addEventListener("mouseover", () => {
       gridSquare.style.background = "#E27D60";
@@ -36,6 +37,7 @@ function makeGrid() {
 makeGrid();
 
 const buttons = document.querySelectorAll("button");
+console.log(buttons);
 
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -43,7 +45,10 @@ buttons.forEach((button) => {
       container.innerHTML = "";
       makeGrid();
     } else if (button.id === "reset") {
-      gridSquare.style.border = "none";
+      const divs = document.querySelectorAll(".square");
+      for (let i = 0; i < divs.length; i++) {
+        divs[i].style.background = "rgb(232, 168, 124";
+      }
     }
   });
 });
