@@ -6,6 +6,7 @@ container.style.width = "600px";
 container.style.height = "600px";
 container.style.background = "#e8a87c";
 container.style.border = "6px solid #E27D60";
+container.style.marginBottom = "15px";
 
 function makeGrid() {
   let count = 0;
@@ -42,6 +43,10 @@ function makeGrid() {
             let b = Math.floor(Math.random() * 255);
             gridSquare.style.background = "rgb(" + r + "," + g + "," + b + ")";
           });
+        } else if (button.id === "original") {
+          gridSquare.addEventListener("mouseover", () => {
+            gridSquare.style.background = "#E27D60";
+          });
         }
       });
     });
@@ -60,7 +65,7 @@ buttons.forEach((button) => {
     } else if (button.id === "reset") {
       const divs = document.querySelectorAll(".square");
       for (let i = 0; i < divs.length; i++) {
-        divs[i].style.background = "rgb(232, 168, 124";
+        divs[i].style.background = "rgb(232, 168, 124)";
       }
     }
   });
