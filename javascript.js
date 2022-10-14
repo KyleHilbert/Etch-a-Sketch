@@ -31,13 +31,26 @@ function makeGrid() {
     gridSquare.addEventListener("mouseover", () => {
       gridSquare.style.background = "#E27D60";
     });
+
+    const buttons = document.querySelectorAll("button");
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        if (button.id === "rgb") {
+          gridSquare.addEventListener("mouseover", () => {
+            let r = Math.floor(Math.random() * 255);
+            let g = Math.floor(Math.random() * 255);
+            let b = Math.floor(Math.random() * 255);
+            gridSquare.style.background = "rgb(" + r + "," + g + "," + b + ")";
+          });
+        }
+      });
+    });
   }
 }
 
 makeGrid();
 
 const buttons = document.querySelectorAll("button");
-console.log(buttons);
 
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
